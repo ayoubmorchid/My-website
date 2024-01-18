@@ -1,0 +1,211 @@
+<html>
+<head>
+    <style>
+body {
+background-color:#363949;}
+
+
+.cora1 {
+height: 200px;
+width: 200px;
+background: linear-gradient( 
+to right,
+#ff512f,
+#f09819)
+;
+border-radius: 50%;
+position: absolute;
+left: 26% ;
+top: -35px;
+animation-name: cora1;
+animation-duration: 9s;
+}
+
+@keyframes cora1 {
+0%   { left:26% ; top:-35px;}
+25%  { left:54%; top:-35px;}
+50%  { left:54%; top:75%;}
+75%  { left:26%; top:75%;}
+100% { left:26%; top:-35px;}
+}
+
+
+.cora2 {
+height: 200px;
+width: 200px;
+background: linear-gradient(    
+#1845ad,
+#23a2f6) ;
+border-radius: 50%;
+position: absolute;
+top: 75%;
+left: 54% ;
+animation-name: cora2;
+animation-duration: 9s;
+}
+
+@keyframes cora2 {
+0%   { left:54% ; top:75%;}
+25%  { left:26%; top:75%;}
+50%  { left:26%; top:-35px;}
+75%  { left:54%; top:-35px;}
+100% { left:54%; top:75%;}
+}
+
+
+form{
+height: 520px;
+width: 400px;
+background-color: rgba(255,255,255,0.13);
+position: absolute;
+transform: translate(-50%,-50%);
+top: 50%;
+left: 50%;
+border-radius: 10px;
+backdrop-filter: blur(10px);
+border: 2px solid rgba(255,255,255,0.1);
+box-shadow: 0 0 40px rgba(8,7,16,0.6);
+box-shadow: 10px 10px 10px rgb(0, 255, 55)
+    }
+
+form *{
+font-family: 'Poppins',sans-serif;
+color: #f5eeee;
+letter-spacing: 0.5px;
+outline: none;
+border: none; }
+
+
+.fieldset1 {
+    
+height: 500px;
+width: 370px;
+position: relative;}
+
+
+h1 {
+font-size: 32px;
+font-weight: 500;
+text-align: center;}   
+
+.user1 {
+
+display: block;
+margin-top: 30px;
+font-size: 16px;
+font-weight: 500;}
+
+
+.user2 {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;}
+    
+
+
+.pass1 {
+display: block;
+margin-top: 30px;
+font-size: 16px;
+font-weight: 500;}
+
+
+.pass2 {
+display: block;
+height: 50px;
+width: 100%;
+background-color: rgba(255,255,255,0.07);
+border-radius: 3px;
+padding: 0 10px;
+margin-top: 8px;
+font-size: 14px;
+font-weight: 300;}
+
+button{
+width:80%;
+height: 11%;
+position: relative;
+top: 9%;
+left: 10%;
+border-radius:3px;
+cursor: pointer;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: larger;
+color: black;}
+
+
+
+.social{
+margin-top: 30px;
+display: flex;}
+ 
+  
+.social div{
+position: relative;
+top: 50px;
+background: red;
+width: 150px;
+border-radius: 3px;
+padding: 5px 10px 10px 5px;
+background-color: rgba(255,255,255,0.27);
+color: #eaf0fb;
+text-align: center;
+cursor: pointer;}
+
+
+.social div:hover{
+background-color: rgba(255,255,255,0.47);}
+
+
+.social .fb{ 
+margin-left: 25px;}
+
+
+.social i{
+margin-right: 4px;}
+  
+.safha {
+    color: black;
+    text-decoration: none;
+}
+
+
+
+</style>
+</head>
+
+
+
+
+<body>
+
+    <div class="cora1"></div>
+    <div class="cora2"></div>
+<form >
+    <fieldset class="fieldset1">
+                                                                             
+        <h1>Login Here</h1>
+        <label class="user1">Username</label>
+        <input type="text" placeholder="Email or phone " class="user2">
+        <label class="pass1">Password</label>
+        <input type="text" placeholder="password" class="pass2">
+        <button><a class="safha" href="index.html">Login</a></button>
+
+        <div class="social">
+            <div class="go"><i class="fab fa-google"></i>Google</div>
+            <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
+        </div>
+    </fieldset>
+</form>
+
+
+
+
+</body>
+</html>
