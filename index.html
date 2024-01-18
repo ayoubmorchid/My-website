@@ -1,294 +1,211 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
-    <link rel="stylesheet" type="icon/x-icon" href="images/4.png">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" type="icon/x-icon" href="/images/icon.png">
-    <link rel="stylesheet" href="./style.css">
-    <title>Dashboard</title>
+    <style>
+body {
+background-color:#363949;}
+
+
+.cora1 {
+height: 200px;
+width: 200px;
+background: linear-gradient( 
+to right,
+#ff512f,
+#f09819)
+;
+border-radius: 50%;
+position: absolute;
+left: 26% ;
+top: -35px;
+animation-name: cora1;
+animation-duration: 9s;
+}
+
+@keyframes cora1 {
+0%   { left:26% ; top:-35px;}
+25%  { left:54%; top:-35px;}
+50%  { left:54%; top:75%;}
+75%  { left:26%; top:75%;}
+100% { left:26%; top:-35px;}
+}
+
+
+.cora2 {
+height: 200px;
+width: 200px;
+background: linear-gradient(    
+#1845ad,
+#23a2f6) ;
+border-radius: 50%;
+position: absolute;
+top: 75%;
+left: 54% ;
+animation-name: cora2;
+animation-duration: 9s;
+}
+
+@keyframes cora2 {
+0%   { left:54% ; top:75%;}
+25%  { left:26%; top:75%;}
+50%  { left:26%; top:-35px;}
+75%  { left:54%; top:-35px;}
+100% { left:54%; top:75%;}
+}
+
+
+form{
+height: 520px;
+width: 400px;
+background-color: rgba(255,255,255,0.13);
+position: absolute;
+transform: translate(-50%,-50%);
+top: 50%;
+left: 50%;
+border-radius: 10px;
+backdrop-filter: blur(10px);
+border: 2px solid rgba(255,255,255,0.1);
+box-shadow: 0 0 40px rgba(8,7,16,0.6);
+box-shadow: 10px 10px 10px rgb(0, 255, 55)
+    }
+
+form *{
+font-family: 'Poppins',sans-serif;
+color: #f5eeee;
+letter-spacing: 0.5px;
+outline: none;
+border: none; }
+
+
+.fieldset1 {
+    
+height: 500px;
+width: 370px;
+position: relative;}
+
+
+h1 {
+font-size: 32px;
+font-weight: 500;
+text-align: center;}   
+
+.user1 {
+
+display: block;
+margin-top: 30px;
+font-size: 16px;
+font-weight: 500;}
+
+
+.user2 {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;}
+    
+
+
+.pass1 {
+display: block;
+margin-top: 30px;
+font-size: 16px;
+font-weight: 500;}
+
+
+.pass2 {
+display: block;
+height: 50px;
+width: 100%;
+background-color: rgba(255,255,255,0.07);
+border-radius: 3px;
+padding: 0 10px;
+margin-top: 8px;
+font-size: 14px;
+font-weight: 300;}
+
+button{
+width:80%;
+height: 11%;
+position: relative;
+top: 9%;
+left: 10%;
+border-radius:3px;
+cursor: pointer;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: larger;
+color: black;}
+
+
+
+.social{
+margin-top: 30px;
+display: flex;}
+ 
+  
+.social div{
+position: relative;
+top: 50px;
+background: red;
+width: 150px;
+border-radius: 3px;
+padding: 5px 10px 10px 5px;
+background-color: rgba(255,255,255,0.27);
+color: #eaf0fb;
+text-align: center;
+cursor: pointer;}
+
+
+.social div:hover{
+background-color: rgba(255,255,255,0.47);}
+
+
+.social .fb{ 
+margin-left: 25px;}
+
+
+.social i{
+margin-right: 4px;}
+  
+.safha {
+    color: black;
+    text-decoration: none;
+}
+
+
+
+</style>
 </head>
 
-<body>
-    <div class="container">
-        <aside>
-            <div class="top">
-                <div class="logo">
-                    <span class="primary material-icons-sharp">
-                        layers
-                        </span>
-                    <h2>FOR<span class="primary">YOU</span></h2>
-                </div>
-                <div class="close" id="close-btn">
-                    <span class="material-icons-sharp">close</span>
-                </div>
-            </div>
-            <div class="sidebar">
-                <a href="#">
-                    <span class="material-icons-sharp">grid_view</span>
-                    <h3>Dashboard</h3>
-                </a>
-                <a href="#" class="active">
-                    <span class="material-icons-sharp">person_outline</span>
-                    <h3>Customers</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">receipt_long</span>
-                    <h3>Order</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">insights</span>
-                    <h3>Analytics</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">mail_outline</span>
-                    <h3>Messager</h3>
-                    <span class="message-count">18</span>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">inventory</span>
-                    <h3>Products</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">report_gmailerrorred</span>
-                    <h3>Reports</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">settings</span>
-                    <h3>Settings</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">add</span>
-                    <h3>Add Product</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">logout</span>
-                    <h3>Logout</h3>
-                </a>
-            </div>
-        </aside>
-        <main>
-            <h1>Dashboard</h1>
-            <div class="date">
-                <input type="date">
-            </div>
-            <div class="insights">
-                <div class="sales">
-                    <span class="material-icons-sharp">analytics</span>
-                    <div class="middle">
-                        <div class="left">
-                            <h3>Total Sales</h3>
-                            <h1>$25,705</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="number">
-                                <p>81%</p>
-                            </div>
-                        </div>
-                    </div>
-                    <small class="text-muted">Last 24 Hours</small>
-                </div>
-                <div class="expenses">
-                    <span class="material-icons-sharp">bar_chart</span>
-                    <div class="middle">
-                        <div class="left">
-                            <h3>Total Expenses</h3>
-                            <h1>$14,952</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="number">
-                                <p>62%</p>
-                            </div>
-                        </div>
-                    </div>
-                    <small class="text-muted">Last 24 Hours</small>
-                </div>
-                <div class="income">
-                    <span class="material-icons-sharp">stacked_line_chart</span>
-                    <div class="middle">
-                        <div class="left">
-                            <h3>Total Income</h3>
-                            <h1>$10,862</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="number">
-                                <p>44%</p>
-                            </div>
-                        </div>
-                    </div>
-                    <small class="text-muted">Last 24 Hours</small>
-                </div>
-            </div>
-            <div class="recent-orders">
-                <h2>Recent Orders</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Product Name</th>
-                            <th>Product Number</th>
-                            <th>Payment</th>
-                            <th>Status</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td id="Foldable-Mini-Drone">Maticha</td>
-                            <td>85961</td>
-                            <td>Due</td>
-                            <td class="warning">Pending</td>
-                            <td class="primary">Details</td>
-                        </tr>
-                        <tr>
-                            <td id="Foldable-Mini-Drone">Btata</td>
-                            <td>85961</td>
-                            <td>Due</td>
-                            <td class="warning">Pending</td>
-                            <td class="primary">Details</td>
-                        </tr>
-                        <tr>
-                            <td id="Foldable-Mini-Drone">Basla</td>
-                            <td>85961</td>
-                            <td>Due</td>
-                            <td class="warning">Pending</td>
-                            <td class="primary">Details</td>
-                        </tr>
-                        <tr>
-                            <td id="Foldable-Mini-Drone">Danjal</td>
-                            <td>85961</td>
-                            <td>Due</td>
-                            <td class="warning">Pending</td>
-                            <td class="primary">Details</td>
-                        </tr>
-                        <tr>
-                            <td id="Foldable-Mini-Drone">Banan</td>
-                            <td>85961</td>
-                            <td>Due</td>
-                            <td class="warning">Pending</td>
-                            <td class="primary">Details</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <a href="#" id="Show-All">Show All</a>
-            </div>
-        </main>
-        <div class="right">
-            <div class="top">
-                <button id="menu-btn">
-                    <span class="primary material-icons-sharp">menu</span>
-                </button>
-                <div class="theme-toggler">
-                    <span class="material-icons-sharp active">light_mode</span>
-                    <span class="material-icons-sharp">dark_mode</span>
-                </div>
-                <div class="profile">
-                    <div class="info">
-                        <p>Hey, <b>Ayoub</b></p>
-                        <small class="text-muted">Admin</small>
-                    </div>
-                    <div class="profile-photo">
-                        <img src="./images/face (1).jpg">
-                    </div>
-                </div>
-            </div>
-            <div class="recent-updates">
-                <h2>Recent Updates</h2>
-                <div class="updates">
-                    <div class="update">
-                        <div class="profile-photo">
-                            <img src="./images/face (1).jpg">
-                        </div>
-                        <div class="message">
-                            <p><b>Ayoub Morchid</b> received his order of Night lion tech GPS drone.</p>
-                            <small class="text-muted">2 Minutes Ago</small>
-                        </div>
-                    </div>
-                    <div class="update">
-                        <div class="profile-photo">
-                            <img src="./images/face (2).jpg">
-                        </div>
-                        <div class="message">
-                            <p><b>Yassine Ennatiqi</b> received his order of Night lion tech GPS drone.</p>
-                            <small class="text-muted">2 Minutes Ago</small>
-                        </div>
-                    </div>
-                    <div class="update">
-                        <div class="profile-photo">
-                            <img src="./images/face (3).jpg">
-                        </div>
-                        <div class="message">
-                            <p><b>Losada Vicky</b> received his order of Night lion tech GPS drone.</p>
-                            <small class="text-muted">2 Minutes Ago</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="sales-analytics">
-                <h2>Sales Analytics</h2>
-                <div class="item online">
-                    <div class="icon">
-                        <span class="material-icons-sharp">shopping_cart</span>
-                    </div>
-                    <div class="right">
-                        <div class="info">
-                            <h3>ONLINE ORDERS</h3>
-                            <small class="text-muted">Last 24 Hours</small>
-                        </div>
-                        <h5 class="success">+39%</h5>
-                        <h3>3695</h3>
-                    </div>
-                </div>
-                <div class="item offline">
-                    <div class="icon">
-                        <span class="material-icons-sharp">local_mall</span>
-                    </div>
-                    <div class="right">
-                        <div class="info">
-                            <h3>OFFLINE ORDERS</h3>
-                            <small class="text-muted">Last 24 Hours</small>
-                        </div>
-                        <h5 class="danger">-17%</h5>
-                        <h3>1253</h3>
-                    </div>
-                </div>
-                <div class="item customers">
-                    <div class="icon">
-                        <span class="material-icons-sharp">person</span>
-                    </div>
-                    <div class="right">
-                        <div class="info">
-                            <h3>NEW CUSTOMERS</h3>
-                            <small class="text-muted">Last 24 Hours</small>
-                        </div>
-                        <h5 class="success">+25%</h5>
-                        <h3>862</h3>
-                    </div>
-                </div>
-                <div class="item add-product">
-                    <div>
-                        <span class="material-icons-sharp">add</span>
-                        <h3>Add Product</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <script src="script.js"></script>
-</body>
 
+
+
+<body>
+
+    <div class="cora1"></div>
+    <div class="cora2"></div>
+<form >
+    <fieldset class="fieldset1">
+                                                                             
+        <h1>Login Here</h1>
+        <label class="user1">Username</label>
+        <input type="text" placeholder="Email or phone " class="user2">
+        <label class="pass1">Password</label>
+        <input type="text" placeholder="password" class="pass2">
+        <button><a class="safha" href="index.html">Login</a></button>
+
+        <div class="social">
+            <div class="go"><i class="fab fa-google"></i>Google</div>
+            <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
+        </div>
+    </fieldset>
+</form>
+
+
+
+
+</body>
 </html>
